@@ -1,0 +1,39 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets --all-features
+Features: test-name=rust-num-bigint:@
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets --no-default-features --features arbitrary
+Features: test-name=librust-num-bigint-dev:arbitrary
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets 
+Features: test-name=librust-num-bigint-dev:default
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets --no-default-features --features quickcheck
+Features: test-name=librust-num-bigint-dev:quickcheck
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets --no-default-features --features rand
+Features: test-name=librust-num-bigint-dev:rand
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets --no-default-features --features serde
+Features: test-name=librust-num-bigint-dev:serde
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets --no-default-features --features std
+Features: test-name=librust-num-bigint-dev:std
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test num-bigint 0.4.3 --all-targets --no-default-features
+Features: test-name=librust-num-bigint-dev:
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable

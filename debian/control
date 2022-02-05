@@ -1,0 +1,67 @@
+Source: rust-num-bigint
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>,
+ librust-autocfg-1+default-dev <!nocheck>,
+ librust-num-integer-0.1+i128-dev (>= 0.1.42-~~) <!nocheck>,
+ librust-num-integer-0.1+std-dev (>= 0.1.42-~~) <!nocheck>,
+ librust-num-traits-0.2+i128-dev (>= 0.2.11-~~) <!nocheck>,
+ librust-num-traits-0.2+std-dev (>= 0.2.11-~~) <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ kpcyrd <git@rxv.cc>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/num-bigint]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/num-bigint
+Homepage: https://github.com/rust-num/num-bigint
+Rules-Requires-Root: no
+
+Package: librust-num-bigint-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-arbitrary-1-dev,
+ librust-autocfg-1+default-dev,
+ librust-num-integer-0.1+i128-dev (>= 0.1.42-~~),
+ librust-num-integer-0.1+std-dev (>= 0.1.42-~~),
+ librust-num-traits-0.2+i128-dev (>= 0.2.11-~~),
+ librust-num-traits-0.2+std-dev (>= 0.2.11-~~),
+ librust-quickcheck-1-dev,
+ librust-rand-0.8-dev,
+ librust-serde-1-dev
+Provides:
+ librust-num-bigint+arbitrary-dev (= ${binary:Version}),
+ librust-num-bigint+default-dev (= ${binary:Version}),
+ librust-num-bigint+quickcheck-dev (= ${binary:Version}),
+ librust-num-bigint+rand-dev (= ${binary:Version}),
+ librust-num-bigint+serde-dev (= ${binary:Version}),
+ librust-num-bigint+std-dev (= ${binary:Version}),
+ librust-num-bigint-0-dev (= ${binary:Version}),
+ librust-num-bigint-0+arbitrary-dev (= ${binary:Version}),
+ librust-num-bigint-0+default-dev (= ${binary:Version}),
+ librust-num-bigint-0+quickcheck-dev (= ${binary:Version}),
+ librust-num-bigint-0+rand-dev (= ${binary:Version}),
+ librust-num-bigint-0+serde-dev (= ${binary:Version}),
+ librust-num-bigint-0+std-dev (= ${binary:Version}),
+ librust-num-bigint-0.4-dev (= ${binary:Version}),
+ librust-num-bigint-0.4+arbitrary-dev (= ${binary:Version}),
+ librust-num-bigint-0.4+default-dev (= ${binary:Version}),
+ librust-num-bigint-0.4+quickcheck-dev (= ${binary:Version}),
+ librust-num-bigint-0.4+rand-dev (= ${binary:Version}),
+ librust-num-bigint-0.4+serde-dev (= ${binary:Version}),
+ librust-num-bigint-0.4+std-dev (= ${binary:Version}),
+ librust-num-bigint-0.4.3-dev (= ${binary:Version}),
+ librust-num-bigint-0.4.3+arbitrary-dev (= ${binary:Version}),
+ librust-num-bigint-0.4.3+default-dev (= ${binary:Version}),
+ librust-num-bigint-0.4.3+quickcheck-dev (= ${binary:Version}),
+ librust-num-bigint-0.4.3+rand-dev (= ${binary:Version}),
+ librust-num-bigint-0.4.3+serde-dev (= ${binary:Version}),
+ librust-num-bigint-0.4.3+std-dev (= ${binary:Version})
+Description: Big integer implementation for Rust - Rust source code
+ This package contains the source for the Rust num-bigint crate, packaged by
+ debcargo for use with cargo and dh-cargo.
