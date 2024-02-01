@@ -1,3 +1,9 @@
+rust-num-bigint (0.4.3-2+pexip24u4) pexip-bookworm; urgency=medium
+
+  * New versioning scheme
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 01 Feb 2024 16:31:52 +0000
+
 rust-num-bigint (0.4.3-2pexip3) pexip-bookworm; urgency=medium
 
   * Bookworm build for product distribution
